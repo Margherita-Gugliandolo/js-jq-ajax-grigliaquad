@@ -45,10 +45,8 @@ function ajaxCall() {
             }
         },
 
-        error: function (request, state, error) {
-            console.log('request', request);
-            console.log('state', state);
-            console.log('error', error);
+        error: function (error) {
+            console.log ("Ops c'è un problema")
           }
     });
 }
