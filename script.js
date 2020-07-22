@@ -28,21 +28,16 @@ function ajaxCall() {
 
             var success = data['success'];
             var value = data['response'];
-            var valueMin = value <= 5;
-            var valueMax = value > 5;
-            console.log(value);
 
-            if (success) {
-                if (valueMin && !valueMax) {
+
+              if (success) {
+                if (value <= 5) {
                     target.addClass('yellow').removeClass('green');
                     target.append(value);
                 } else {
                     target.removeClass('yellow').addClass('green').removeClass('yellow');
                     target.append(value);
                 }
-            } else {
-               alert('Error');
-            }
         },
 
         error: function (error) {
