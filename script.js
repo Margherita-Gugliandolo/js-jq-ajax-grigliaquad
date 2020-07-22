@@ -30,7 +30,7 @@ function ajaxCall() {
             var value = data['response'];
 
 
-              if (success) {
+
                 if (value <= 5) {
                     target.addClass('yellow').removeClass('green');
                     target.append(value);
